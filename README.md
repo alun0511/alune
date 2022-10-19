@@ -1,4 +1,4 @@
-INSERT MANDATORY GIF
+![synth-cat](https://i.giphy.com/media/Hcw7rjsIsHcmk/giphy.webp)
 
 # Project Title
 
