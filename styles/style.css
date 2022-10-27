@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+.grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    '. hd hd .'
+    '. main main .'
+    '. ft ft .';
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  grid-area: hd;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: ft;
+}
+
+audio::-webkit-media-controls-play-button {
+  transform: scale(2, 2);
+}
+
+audio::-webkit-media-controls-timeline {
+  display: none;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: blue;
+}
+
+audio {
+  width: 100px;
+  height: 100px;
+}
