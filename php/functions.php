@@ -4,28 +4,28 @@ declare(strict_types=1);
 
 require __DIR__ . '/arrays.php';
 
+// randomizes which mp3-files and what interval to compare the guess with.
+
 shuffle($intervals);
 
-/* $guess = ;
 
+function compareGuess($guess)
+{
+    if (array_key_exists($guess, $_POST)) {
 
-
-function compare()
-
-if (array_key_exists('randSound', $_POST)) {
-    $_SESSION[] = ['randomizedSound' => $intervals[0]['name']];
-    print_r($_SESSION);
-}
-
-if (array_key_exists('prim', $_POST)) {
-
-    if ($_SESSION[]) {
-
+        if ($_SESSION['randomizedSound'] === $guess) {
+            echo "<p>OMG RÄTT!</p>";
+        } else {
+            echo "<p>OMG FEL!</p>";
+        }
     }
 }
 
-print_r($_POST) . '<br>';
-print_r($_SESSION) . '<br>'; */
+/*
+if $_POST['randSound'] has a key push that value to the $_SESSION array.
+This saves what the latest randomized sound is from the $_POST array.
+ */
 
-
-shuffle($intervals);
+if (array_key_exists('randSound', $_POST)) {
+    $_SESSION = ['randomizedSound' => $intervals[0]['name']];
+}
