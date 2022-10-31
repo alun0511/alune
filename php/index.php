@@ -35,7 +35,7 @@ require __DIR__ . '/functions.php';
                 </div>
             </header>
 
-            <audio controls muted>
+            <audio controls>
                 <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
             </audio>
         </div>
