@@ -23,36 +23,54 @@ require __DIR__ . '/functions.php';
         </header>
         <main>
             <section>
-                <?php compareGuess('prim') ?>
-                <div class="sounds">
-                    <ul>
-                        <li>
-
-                            <audio controls muted>
-                                <source src="/audio/<?= $intervals[0] ?>" type="audio/mp3" />
-                            </audio>
-
-                            <form method="post">
-                                <input type="submit" name="randSound" class="button" value="Randomize" />
-                            </form>
-
-                        </li>
-                        <li>
-
-                            <form method="post">
-                                <input type="submit" name="prim" class="button" value="prim" />
-                            </form>
-
-                        </li>
-
-
-                    </ul>
+                <div class="feedbackPHP">
+                    <?php
+                    compareGuess('prim');
+                    compareGuess('sekund');
+                    compareGuess('ters');
+                    compareGuess('kvart');
+                    compareGuess('kvint');
+                    compareGuess('sext');
+                    compareGuess('septima');
+                    compareGuess('oktav');
+                    ?>
                 </div>
+                <audio controls muted>
+                    <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
+                </audio>
             </section>
+
+            <div class="intervals">
+                <form method="post">
+
+                    <input type="submit" name="randSound" class="randomizeButton" value="Randomize interval" />
+
+                    <input type="submit" name="prim" class="button" value="Prim" />
+
+                    <input type="submit" name="sekund" class="button" value="Sekund" />
+
+                    <input type="submit" name="ters" class="button" value="Ters" />
+
+                    <input type="submit" name="kvart" class="button" value="Kvart" />
+
+                    <input type="submit" name="kvint" class="button" value="Kvint" />
+
+                    <input type="submit" name="sext" class="button" value="Sext" />
+
+                    <input type="submit" name="septima" class="button" value="Septima" />
+
+                    <input type="submit" name="oktav" class="button" value="Oktav" />
+
+                </form>
+            </div>
         </main>
         <footer></footer>
     </div>
 </body>
 
 </html>
-<?php print_r($_SESSION) . '<br>';
+
+<?php
+
+print_r($_SESSION) . '<br>';
+print_r($_POST) . '<br>';

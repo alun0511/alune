@@ -2,46 +2,59 @@
   box-sizing: border-box;
 }
 .grid {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    '. hd hd .'
-    '. main main .'
-    '. ft ft .';
+  grid-template-rows: 1fr, 50vh;
+  grid-template-columns: 5vw, 50vw, 50vw, 5vw;
+  row-gap: 4vh;
+  column-gap: 4vw;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+form {
+  display: inline;
 }
 
-header {
-  grid-area: hd;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: ft;
-}
-
-audio::-webkit-media-controls-play-button {
+/* audio::-webkit-media-controls-play-button {
   transform: scale(2, 2);
 }
 
-audio::-webkit-media-controls-timeline {
+audio::-webkit-media-meter-bar {
   display: none;
 }
 
 audio::-webkit-media-controls-panel {
   background-color: blue;
-}
+} */
 
 audio {
+  display: block;
+  width: 20vw;
+}
+
+.randomizeButton {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 2px;
+  border: none;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+.button {
+  border-radius: 5px;
   width: 100px;
-  height: 100px;
+  height: 30px;
+  margin-top: 2px;
+  border: none;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.feedbackPHP {
+  width: 20vw;
+  height: 20vh;
+  background-color: hotpink;
 }
