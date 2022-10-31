@@ -3,6 +3,9 @@
 session_start();
 require __DIR__ . '/arrays.php';
 require __DIR__ . '/functions.php';
+
+
+
 ?>
 
 <html lang="en">
@@ -17,54 +20,46 @@ require __DIR__ . '/functions.php';
 
 <body>
     <div class="grid">
-        <header>
-            <h1>Pitch Practicer</h1>
-            <p>Pitch dont kill my vibe</p>
-        </header>
-        <main>
-            <section>
-                <div class="feedbackPHP">
-                    <?php
-                    compareGuess('prim');
-                    compareGuess('sekund');
-                    compareGuess('ters');
-                    compareGuess('kvart');
-                    compareGuess('kvint');
-                    compareGuess('sext');
-                    compareGuess('septima');
-                    compareGuess('oktav');
-                    ?>
-                </div>
-                <audio controls muted>
-                    <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
-                </audio>
-            </section>
+        <div class="item1">
+            <header>
+                <h1>Pitch Practicer</h1>
+                <p>Pitch dont kill my vibe</p>
 
-            <div class="intervals">
                 <form method="post">
-
                     <input type="submit" name="randSound" class="randomizeButton" value="Randomize interval" />
-
-                    <input type="submit" name="prim" class="button" value="Prim" />
-
-                    <input type="submit" name="sekund" class="button" value="Sekund" />
-
-                    <input type="submit" name="ters" class="button" value="Ters" />
-
-                    <input type="submit" name="kvart" class="button" value="Kvart" />
-
-                    <input type="submit" name="kvint" class="button" value="Kvint" />
-
-                    <input type="submit" name="sext" class="button" value="Sext" />
-
-                    <input type="submit" name="septima" class="button" value="Septima" />
-
-                    <input type="submit" name="oktav" class="button" value="Oktav" />
-
                 </form>
-            </div>
-        </main>
-        <footer></footer>
+                <div class='<?= $feedback ?>'>
+
+
+
+                </div>
+            </header>
+
+            <audio controls muted>
+                <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
+            </audio>
+        </div>
+        <div class="item2">
+            <form method="get">
+
+                <input type="submit" name="guess" class="button" value="prim" />
+
+                <input type="submit" name="guess" class="button" value="sekund" />
+
+                <input type="submit" name="guess" class="button" value="ters" />
+
+                <input type="submit" name="guess" class="button" value="kvart" />
+
+                <input type="submit" name="guess" class="button" value="kvint" />
+
+                <input type="submit" name="guess" class="button" value="sext" />
+
+                <input type="submit" name="guess" class="button" value="septima" />
+
+                <input type="submit" name="guess" class="button" value="oktav" />
+
+            </form>
+        </div>
     </div>
 </body>
 
@@ -72,5 +67,6 @@ require __DIR__ . '/functions.php';
 
 <?php
 
-print_r($_SESSION) . '<br>';
-print_r($_POST) . '<br>';
+/*
+echo $_SESSION['randomizedSound'] . '<br>';
+echo $_GET['guess']; */

@@ -1,12 +1,8 @@
 ![synth-cat](https://i.giphy.com/media/Hcw7rjsIsHcmk/giphy.webp)
 
-# Project Title
+# Pitch Practicer
 
-Text about the project and why it exists. This would also be a great place to link the project on One.com.
-
-# Installation
-
-Add the installation instructions.
+This website helps you learn how to recognize different intervals.
 
 # Code Review
 

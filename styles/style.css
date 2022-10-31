@@ -1,16 +1,67 @@
+:root {
+  font-family: sans-serif;
+  --blue: rgb(102, 102, 218);
+  --red: rgb(255, 122, 122);
+  --green: rgb(139, 236, 139);
+}
+
 * {
   box-sizing: border-box;
 }
+
 .grid {
+  justify-content: center;
   display: grid;
-  grid-template-rows: 1fr, 50vh;
-  grid-template-columns: 5vw, 50vw, 50vw, 5vw;
-  row-gap: 4vh;
   column-gap: 4vw;
+  row-gap: 4vh;
 }
 
-form {
-  display: inline;
+header {
+  grid-row: 1;
+}
+
+audio {
+  margin-top: 5vh;
+  width: 20vw;
+}
+
+.randomizeButton {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+}
+.button {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 2px;
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.default {
+  width: 20vw;
+  height: 20vh;
+  background-color: var(--blue);
+  color: white;
+}
+.correct {
+  width: 20vw;
+  height: 20vh;
+  background-color: var(--green);
+  color: white;
+}
+.incorrect {
+  width: 20vw;
+  height: 20vh;
+  background-color: var(--red);
+  color: white;
 }
 
 /* audio::-webkit-media-controls-play-button {
@@ -24,37 +75,3 @@ audio::-webkit-media-meter-bar {
 audio::-webkit-media-controls-panel {
   background-color: blue;
 } */
-
-audio {
-  display: block;
-  width: 20vw;
-}
-
-.randomizeButton {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  margin-top: 2px;
-  border: none;
-  background-color: blue;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-}
-.button {
-  border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  margin-top: 2px;
-  border: none;
-  background-color: blue;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.feedbackPHP {
-  width: 20vw;
-  height: 20vh;
-  background-color: hotpink;
-}
