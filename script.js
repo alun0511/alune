@@ -1,3 +1,11 @@
 const audio = document.querySelector('audio');
+console.log(audio);
+// var x = document.getElementById("myAudio");
 
-console.log('audio');
+audio.addEventListener('click', () => {
+  console.log('clicked audio');
+});
+
+const play = audio.addEventListener('play');
+
+console.log(play);
