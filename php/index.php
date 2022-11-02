@@ -1,13 +1,11 @@
 <?php
 
 session_start();
-require __DIR__ . '/arrays.php';
-require __DIR__ . '/functions.php';
-
-
+require './arrays.php';
+require './functions.php';
 
 ?>
-
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -23,50 +21,49 @@ require __DIR__ . '/functions.php';
         <div class="item1">
             <header>
                 <h1>Pitch Practicer</h1>
-                <p>Pitch dont kill my vibe</p>
+                <ol>
+                    <li>Randomize</li>
+                    <li>Press play</li>
+                    <li>Take a guess</li>
+                </ol>
 
                 <form method="post">
                     <input type="submit" name="randSound" class="randomizeButton" value="Randomize interval" />
                 </form>
                 <div class='<?= $feedback ?>'>
 
+                    <audio controls>
+                        <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
+                    </audio>
 
 
                 </div>
             </header>
+            <div class="item2">
+                <form method="get">
 
-            <audio controls>
-                <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
-            </audio>
-        </div>
-        <div class="item2">
-            <form method="get">
+                    <input type="submit" name="guess" class="button" value="prim" />
 
-                <input type="submit" name="guess" class="button" value="prim" />
+                    <input type="submit" name="guess" class="button" value="sekund" />
 
-                <input type="submit" name="guess" class="button" value="sekund" />
+                    <input type="submit" name="guess" class="button" value="ters" />
 
-                <input type="submit" name="guess" class="button" value="ters" />
+                    <input type="submit" name="guess" class="button" value="kvart" />
 
-                <input type="submit" name="guess" class="button" value="kvart" />
+                    <input type="submit" name="guess" class="button" value="kvint" />
 
-                <input type="submit" name="guess" class="button" value="kvint" />
+                    <input type="submit" name="guess" class="button" value="sext" />
 
-                <input type="submit" name="guess" class="button" value="sext" />
+                    <input type="submit" name="guess" class="button" value="septima" />
 
-                <input type="submit" name="guess" class="button" value="septima" />
+                    <input type="submit" name="guess" class="button" value="oktav" />
 
-                <input type="submit" name="guess" class="button" value="oktav" />
+                </form>
+            </div>
 
-            </form>
         </div>
     </div>
+    <script src="/script.js"></script>
 </body>
 
 </html>
-
-<?php
-
-/*
-echo $_SESSION['randomizedSound'] . '<br>';
-echo $_GET['guess']; */

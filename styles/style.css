@@ -1,67 +1,101 @@
 :root {
-  font-family: sans-serif;
-  --blue: rgb(102, 102, 218);
-  --red: rgb(255, 122, 122);
-  --green: rgb(139, 236, 139);
+  font-family: 'Times New Roman', Times, serif;
+  --darkbeige: #8c8377;
+  --lightbeige: #bfb3a4;
+  --whitebrown: #d9cdbf;
+  --bgblack: #010d00;
+  --red: #f25749;
+  --green: #3fbf77;
+  --orange: #f2a444;
+  --white: #f2f0eb;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.grid {
-  justify-content: center;
+body {
+  color: var(--darkpurp);
+  background-color: var(--bgblack);
+  grid-template-columns: repeat(3, 1fr);
   display: grid;
   column-gap: 4vw;
-  row-gap: 4vh;
+}
+
+.grid {
+  background-color: var(--darkbeige);
+  justify-content: center;
+  grid-column: 2;
+  justify-self: center;
 }
 
 header {
+  background-color: var(--lightbeige);
   grid-row: 1;
+  text-align: center;
 }
 
 audio {
-  margin-top: 5vh;
   width: 20vw;
 }
 
+form {
+  background-color: var(--whitebrown);
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
 .randomizeButton {
-  border-radius: 5px;
-  border: none;
-  background-color: var(--blue);
-  color: white;
+  border-right-style: 4px solid var(--lightbeige) outset;
+  border-bottom-style: 4px solid var(--darkbeige) outset;
+  background-color: var(--orange);
+  color: var(--bgblack);
   text-align: center;
   font-size: 1rem;
   padding: 10px;
 }
 .button {
   padding: 10px;
-  border-radius: 5px;
   margin-top: 2px;
-  border: none;
-  background-color: var(--blue);
-  color: white;
+  border-right-style: 4px solid var(--lightbeige) outset;
+  border-bottom-style: 4px solid var(--darkbeige) outset;
+  background-color: var(--white);
+  color: black;
   text-align: center;
   font-size: 1rem;
 }
 
 .default {
-  width: 20vw;
-  height: 20vh;
-  background-color: var(--blue);
-  color: white;
+  width: 22vw;
+  height: 18vh;
+  background-color: var(--orange);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
 }
 .correct {
-  width: 20vw;
-  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+  height: 18vh;
   background-color: var(--green);
-  color: white;
+  color: var(--white);
+  border-radius: 200px;
 }
 .incorrect {
-  width: 20vw;
-  height: 20vh;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22vw;
+  height: 18vh;
   background-color: var(--red);
-  color: white;
+  color: var(--white);
 }
 
 /* audio::-webkit-media-controls-play-button {
@@ -73,5 +107,4 @@ audio::-webkit-media-meter-bar {
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: blue;
 } */
