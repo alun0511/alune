@@ -4,7 +4,7 @@
 
 This website helps you learn how to recognize different intervals.
 
-Check it out at (https://www.alune.se/index.php)! :fire: :musical_keyboard: :fire:
+Check it out at https://www.alune.se/index.php! :fire: :musical_keyboard: :fire:
 
 # Code Review
 
