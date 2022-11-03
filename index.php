@@ -1,12 +1,12 @@
 <?php
-
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 session_start();
-session_destroy();
-require 'arrays.php';
-require 'functions.php';
+require './arrays.php';
+require './functions.php';
 
 ?>
-<!DOCTYPE HTML>
+
 <html lang="en">
 
 <head>
@@ -21,44 +21,44 @@ require 'functions.php';
     <div class="grid">
         <div class="item1">
             <header>
-                <h1>Pitch Practicer</h1>
+                <h1>Gehövning</h1>
                 <ol>
-                    <li>Randomize</li>
-                    <li>Press play</li>
-                    <li>Take a guess</li>
+                    <li>Slumpa interval</li>
+                    <li>Tryck play</li>
+                    <li>Gissa intervallen</li>
                 </ol>
 
                 <form method="post">
-                    <input type="submit" name="randSound" class="randomizeButton" value="Randomize interval" />
+                    <input type="submit" name="randSound" class="randomizeButton" value="Slumpa intervall" />
                 </form>
-                <div class='<?= $feedback ?>'>
-
-                    <audio controls>
-                        <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
-                    </audio>
-
-
-                </div>
             </header>
+            <div class='<?= $feedback ?>'>
+
+<audio controls>
+    <source src="/audio/<?= $intervals[0]['filename'] ?>" type="audio/mp3" />
+</audio>
+
+
+</div>
             <div class="item2">
                 <form method="get">
+                    <div class="wrapper">
+                        <input type="submit" name="guess" class="button" value="prim" />
 
-                    <input type="submit" name="guess" class="button" value="prim" />
+                        <input type="submit" name="guess" class="button" value="sekund" />
 
-                    <input type="submit" name="guess" class="button" value="sekund" />
+                        <input type="submit" name="guess" class="button" value="ters" />
 
-                    <input type="submit" name="guess" class="button" value="ters" />
+                        <input type="submit" name="guess" class="button" value="kvart" />
 
-                    <input type="submit" name="guess" class="button" value="kvart" />
+                        <input type="submit" name="guess" class="button" value="kvint" />
 
-                    <input type="submit" name="guess" class="button" value="kvint" />
+                        <input type="submit" name="guess" class="button" value="sext" />
 
-                    <input type="submit" name="guess" class="button" value="sext" />
+                        <input type="submit" name="guess" class="button" value="septima" />
 
-                    <input type="submit" name="guess" class="button" value="septima" />
-
-                    <input type="submit" name="guess" class="button" value="oktav" />
-
+                        <input type="submit" name="guess" class="button" value="oktav" />
+                    </div>
                 </form>
             </div>
 
