@@ -20,5 +20,5 @@ Code review written by [Gustav Enoksson](https://github.com/GustavE).
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Simon Lövbacka
+2. Robin Persson
